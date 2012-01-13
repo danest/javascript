@@ -1,0 +1,140 @@
+
+
+
+<html>
+
+  <body></body>
+</html>
+
+
+<script type="text/javascript">
+
+  /*
+     1
+    1 1
+    1 2 1
+
+  */
+(function(rows){
+  
+ if(rows === 0) return;
+ currentArray = []; //create empty array
+ currentArray.push(1);
+ console.log(currentArray);
+ var i = 1;
+ while(i < rows){
+ thisArray = [];
+ thisArray.push(currentArray[0]);
+  var j = 1;
+  while(j < i){
+    //console.log(i);
+    thisArray.push(currentArray[j-1] + currentArray[j] );
+    //console.log('in while loop inner');
+    j++;
+  }
+  thisArray.push(currentArray[i-1]);
+  currentArray = thisArray;
+  console.log(currentArray);
+  i++;
+ }
+  //console.log(x);
+
+})(0);
+  
+/*
+
+X bottles of beer on the wall
+X bottles of beer
+Take one down, pass it around
+X-1 bottles of beer on the wall
+
+X-1 bottles of beer on the wall
+...
+Take one down, pass it around
+0 bottles of beer on the wall
+
+ */
+
+function Beer(beers){
+  var beers = beers;
+  function doSomething(){
+   var newDiv = document.createElement('div')
+   newDiv.style.width = '185px';
+    while(beers){
+      newDiv.innerHTML += beers +' bottles of beer on the wall\n';
+      beers--;
+    }
+    document.body.appendChild(newDiv);
+  }
+
+  return {
+    public_print: function(){
+      doSomething();              
+    }
+  }
+ // return a;
+}
+
+var b = new Beer(10);
+console.log(b);
+b.public_print();
+
+
+String.prototype.reverse = function(){
+ return this.split('').reverse().join('');
+};
+
+function rev(s){
+  var t = "";
+  var a = s.length;
+  while(a> 0){
+    t += s.charAt(a-1);
+    a--;
+  }
+  return t;
+}
+
+console.log(rev("hello"));
+
+var tally = {}
+
+function count(s){
+ var a = 0;
+ while(a < s.length){
+   //console.log('print out');
+   var c = s.charAt(a);
+   if(tally[c] === undefined){
+    tally[c] = 1;
+   } else {
+    tally[c]++;
+  }
+   a++;
+ }
+}
+console.log('fdsfsd');
+count('hheelldfsdfasdfiojkdlsfjo');
+console.log(tally);
+var output = '';
+for (property in tally) {
+  output += property + ': ' + tally[property]+ "; \n"
+}
+//alert(output);
+
+var nDiv = document.createElement('div')
+nDiv.style.width = '30px';
+nDiv.innerHTML = output;
+
+document.body.appendChild(nDiv);
+
+
+
+function isPrime(number){
+ if(number == 0) return false;
+ if(number == 2) return true;
+
+}
+
+console.log(isPrime(2);
+</script>
+
+

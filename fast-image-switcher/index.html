@@ -1,11 +1,14 @@
+<!doctype html>
+<head>
+  <title> Fast Image Switcher </title>
 <style type="text/css">
   
-ul,li{
-		margin: 0;
-		padding: 0;
-		outline: none;
-		border: none;    
-}
+  *{
+  	margin: 0;
+  	padding: 0;
+  	outline: none;
+  	border: none;    
+  }
 
   ul#holder{
     width:200px;
@@ -23,26 +26,25 @@ ul,li{
     
   }
   a{
-position:absolute;
-	height: 150px;
-	width: 200px;
-  display: block;
-  z-index:100;
+    position:absolute;
+	  height: 150px;
+  	width: 200px;
+    display: block;
+    z-index:100;
   }
   
 </style>
-
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 
   $(document).ready(function(){
-      // alert('ready')
-
+   
       var timer;
 
       function changeIndex(){
       $('li').each(function(i){
-          //console.log($(this).width());
+        //console.log($(this).width());
+        //change z-index on every hover
           $(this).css('z-index',Math.floor(Math.random() * 30));
         });
 
@@ -59,11 +61,11 @@ position:absolute;
           $(this).css('z-index',0);
         });
 
-        });
+      });
 
 	});
 </script>
-<title>something here</title>
+</head>
 	<body>
     <p>super fast image switch</p>
   
@@ -77,3 +79,4 @@ position:absolute;
 
 	</body>
 </html>
+

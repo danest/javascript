@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <style type="text/css" media="screen">
+textarea, 
+pre {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+      
+      div#holder{
+        width:150px;
+      }
+      div.b {
+       width: 50px;
+       float:left;
+       border:1px solid black;
+       text-align:center;
+     }
+
+     .expandingArea {
+       position:relative;
+       border:2px solid black;
+       background:#fff;
+       width:245px;
+     }
+
+     :target {
+      -webkit-animation: target-fade 3s 1;
+    }
+
+    @-webkit-keyframes target-fade {
+      0% { background-color: rgba(255,0,0,.1)}
+      100% { background-color:rgba(0,0,0,0)}
+    }
+    </style>
+    <title> simple calculator</title>
+  </head>
+  <body>
+    <input id="text"></input><div style="clear:both"></div>
+    <div id="holder">
+      <div class="b">1</div>
+      <div class="b">2</div>
+      <div class="b">3</div>
+      <div class="b">4</div>
+      <div class="b">5</div>
+      <div class="b">6</div>
+      <div class="b">7</div>
+      <div class="b">8</div>
+      <div class="b">9</div>
+      <div class="b">0</div>
+    </div><br />
+<div style="clear:both"></div>
+
+<div class="expandingArea">
+  <pre><span></span><br></pre>
+  <textarea rows ="2" cols ="32"></textarea>
+</div>
+<div id='somethingHere'>
+  <p> Text goes here </p>
+</div>
+  </body>
+
+<a href="#1">Link 1</a>
+<a href="#2">Link 2</a>
+<a href="#3">Link 3</a>
+<div id="1">Paragraph 1</div>
+<p id="2">Paragraph 2</p>
+<p id="3">Paragraph 3</p>
+</html>
+<script>
+
+
+  var allDivs = document.getElementsByClassName('b');
+  console.log(allDivs);
+
+  for(var i = 0; i < allDivs.length;i++){
+    allDivs[i].addEventListener('click', function(){
+      //alert(this.innerHTML);
+      input.value += this.innerHTML;
+    })
+  }
+
+  var input = document.getElementById('text');
+  input.value = "";
+
+
+  function fade(id){
+    var el = document.getElementById(id);
+    console.log(el);
+    var fadeNum = 1;
+    el.style.opacity = 1;
+    function doFade(){
+      var fadeColor = fadeNum.toString(16);
+      el.style.backgroundColor = '#ffff' + fadeColor + fadeColor;
+      if(fadeNum < 16){
+        fadeNum += 1;
+        el.style.opacity -= .1;
+       // console.log(el.style.opacity);
+        //console.log('in fade function');
+        setTimeout(doFade, 100);
+      }else {
+        el.style.opacity = 0;
+      }
+    }
+    doFade();
+  
+  }
+
+  fade('somethingHere');
+
+  window.onscroll = function(){
+    console.log('scrolling');
+  }
+
+</script>
