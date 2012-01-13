@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style type="text/css">
   
 ul,li{
@@ -6,6 +7,19 @@ ul,li{
 		outline: none;
 		border: none;    
 }
+=======
+<!doctype html>
+<head>
+  <title> Fast Image Switcher </title>
+<style type="text/css">
+  
+  *{
+  	margin: 0;
+  	padding: 0;
+  	outline: none;
+  	border: none;    
+  }
+>>>>>>> master
 
   ul#holder{
     width:200px;
@@ -23,6 +37,7 @@ ul,li{
     
   }
   a{
+<<<<<<< HEAD
 position:absolute;
 	height: 150px;
 	width: 200px;
@@ -32,17 +47,36 @@ position:absolute;
   
 </style>
 
+=======
+    position:absolute;
+	  height: 150px;
+  	width: 200px;
+    display: block;
+    z-index:100;
+  }
+  
+</style>
+>>>>>>> master
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript">
 
   $(document).ready(function(){
+<<<<<<< HEAD
       // alert('ready')
 
+=======
+   
+>>>>>>> master
       var timer;
 
       function changeIndex(){
       $('li').each(function(i){
+<<<<<<< HEAD
           //console.log($(this).width());
+=======
+        //console.log($(this).width());
+        //change z-index on every hover
+>>>>>>> master
           $(this).css('z-index',Math.floor(Math.random() * 30));
         });
 
@@ -59,11 +93,19 @@ position:absolute;
           $(this).css('z-index',0);
         });
 
+<<<<<<< HEAD
         });
 
 	});
 </script>
 <title>something here</title>
+=======
+      });
+
+	});
+</script>
+</head>
+>>>>>>> master
 	<body>
     <p>super fast image switch</p>
   
@@ -77,3 +119,7 @@ position:absolute;
 
 	</body>
 </html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master

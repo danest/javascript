@@ -1,0 +1,40 @@
+Getting started with javascript
+
+
+Variables
+
+In javascript variables are used to store information. Variables are also case sensitives. 
+You can store strings, arrays, numbers or objects
+
+<pre><code class="javascript">
+
+var a = "Hello";
+console.log(a) //prints out Hello
+var A = "World";
+console.log(A) //prints out World
+
+//store an array in a variable
+var array = [1,2,4];
+console.log(array) // [1, 2, 4]
+</code></pre>
+
+You can also do arithmetic with variables. All the common operators work "+, -, *, /"
+
+<pre><code class="javascript">
+
+var num1 = 10;
+var num2 = 15;
+
+var num3 = num1 + num2;
+console.log(num3) //25
+</code></pre>
+
+If you use the plus operators with strings then the two strings are concatenated.
+<pre><code class="javascript">
+
+var a = "Hello";
+var b = "World";
+// concatenated an empty space also to make the print out clear
+var wholeString = a + " "+ b;
+console.log(wholeString)//Hello World
+</code></pre>
